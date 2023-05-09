@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/login")
+@RequestMapping
 public class UserController {
 
-    @PostMapping
+    @PostMapping("/login")
     public String loginId(String id, String password) {
         log.info("id={}", id);
         log.info("password={}", password);
