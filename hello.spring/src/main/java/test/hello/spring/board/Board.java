@@ -1,6 +1,8 @@
-package test.hello.spring.domain;
+package test.hello.spring.board;
 
 import lombok.*;
+import test.hello.spring.category.Category;
+import test.hello.spring.user.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

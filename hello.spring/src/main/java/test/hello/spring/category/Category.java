@@ -1,4 +1,4 @@
-package test.hello.spring.domain;
+package test.hello.spring.category;
 
 import lombok.*;
 
