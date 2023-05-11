@@ -26,7 +26,6 @@ public class UserService {
         return user.getId();
     }
 
-    @Transactional
     public boolean login(User user) {
         Optional<User> findUser = userRepository.findByName(user.getUserName()).stream().findFirst();
         String encodedPassword = findUser.map(User::getPassword).orElseThrow(() -> new IllegalStateException("아이디와 비밀번호를 확인해 주세요"));

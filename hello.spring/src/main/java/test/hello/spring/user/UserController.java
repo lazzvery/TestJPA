@@ -29,7 +29,7 @@ public class UserController {
 
     @PostMapping("/join")
     public String join(User user, String password2) {
-        if(user.getPassword() .equals(password2)) userService.join(user);
+        if(user.getPassword().equals(password2)) userService.join(user);
         else throw new IllegalStateException("비밀번호를 확인해 주세요");
         return "/index";
     }

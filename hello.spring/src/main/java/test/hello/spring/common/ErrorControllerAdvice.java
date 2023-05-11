@@ -11,7 +11,6 @@ public class ErrorControllerAdvice {
 
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<String> illegalStateErrorHandler(IllegalStateException e) {
-        log.error("Error msg = {}", e.getMessage());
         return ResponseEntity.badRequest().body(e.getMessage());
     }   // 중복 회원 에러 핸들링
 
