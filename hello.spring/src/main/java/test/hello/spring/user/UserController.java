@@ -16,35 +16,22 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/login")
-    public String login() {
-        return "/index";
-    }
+    public String login() { return "/index"; }
 
     @PostMapping("/login")
     public String login(User user) {
-
-        log.info("user={}", user);
+        userService.login(user);
         return "/board";
-
     }
 
     @GetMapping("/join")
-    public String join() {
-        return "/join";
-    }
+    public String join() { return "/join"; }
 
     @PostMapping("/join")
     public String join(User user, String password2) {
-
-        log.info("userName={}", user.getUserName());
-        log.info("password={}", user.getPassword());
-        log.info("password2={}", password2);
-        log.info("name={}", user.getName());
-
-        userService.join(user);
-
+        if(user.getPassword() .equals(password2)) userService.join(user);
+        else throw new IllegalStateException("비밀번호를 확인해 주세요");
         return "/index";
-
     }
 
 }

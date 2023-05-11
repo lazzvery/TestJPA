@@ -26,7 +26,6 @@ class UserControllerTest {
         // Then
         User findUser = userRepository.findOne(saveId);
         assertEquals(user, findUser);
-
     }
 
 }
