@@ -3,10 +3,12 @@
 <head>
   <title>회원가입</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../common.css">
   <link rel="stylesheet" href="../join.css">
   <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
   <script defer src="/js/common.js"></script>
 <body>
+<h1>회원 가입</h1>
   <div class="join-form">
     <form action="/join" method="post" th:object="${userForm}">
       <input type="text" name="userName" class="text-field" placeholder="아이디"
@@ -14,10 +16,12 @@
       <input type="password" name="password" class="text-field" placeholder="비밀번호">
       <input type="password" name="password2" class="text-field" placeholder="비밀번호 확인">
       <input type="name" name="name" class="text-field" placeholder="이름">
-      <input type="submit" value="회원 가입" class="submit-btn">
+      <input type="submit" value="가입하기" class="submit-btn">
     </form>
     <div class="links">
       <a href="/login">로그인</a>
+      <span style="color: #c9c9c9">|</span>
+      <a href="">ID/PW 찾기</a>
     </div>
   </div>
 </body>

@@ -1,7 +1,6 @@
 package test.hello.spring.board;
 
 import lombok.*;
-import test.hello.spring.category.Category;
 import test.hello.spring.user.User;
 
 import javax.persistence.*;
@@ -23,10 +22,6 @@ public class Board {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category;
 
     private String title;
     private String content;

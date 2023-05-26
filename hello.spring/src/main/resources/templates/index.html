@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>로그인</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="../index.css">
-  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
-  <script defer src="/js/common.js"></script>
+    <title>로그인</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <script defer src="/js/common.js"></script>
 </head>
 <body>
-  <div class="login-form">
+<h1>쉿! 비밀 교환 일기장</h1>
+<div class="login-form">
     <form action="/login" method="post">
-      <input type="text" name="userName" class="text-field" placeholder="아이디">
-      <input type="password" name="password" class="text-field" placeholder="비밀번호">
-      <input type="submit" value="로그인" class="submit-btn">
+        <input type="text" name="userName" class="text-field" placeholder="아이디">
+        <input type="password" name="password" class="text-field" placeholder="비밀번호">
+        <div class="keep_div">
+            <input type="checkbox" id="keep" value="off" class="input_keep">
+            <label for="keep" class="keep_text">로그인 상태 유지</label>
+        </div>
+        <input type="submit" value="로그인" class="submit-btn">
     </form>
- 
+
     <div class="links">
-      <a href="/join">회원가입</a>
+        <a href="/join">회원 가입</a>
+        <span style="color: #c9c9c9">|</span>
+        <a href="">ID/PW 찾기</a>
     </div>
-  </div>
+</div>
 </body>
 </html>
